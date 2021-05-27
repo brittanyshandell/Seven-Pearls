@@ -1,11 +1,10 @@
-export default{
-    productos: [
+ const data=[
         {
             _id: '1',
             name: 'Pulsera Negra Seven Pearls',
             category: 'Pulseras negras',
             image:'/images/pulsera (1).jpeg',
-            price: 60,
+            price: 599,
             brand: 'Seven Pearls',
             rating: 4.5,
             numReviews: 10,
@@ -72,5 +71,5 @@ export default{
             countInStock: 6,
 
         },  
-    ],
-};
+    ];
+    export default data;

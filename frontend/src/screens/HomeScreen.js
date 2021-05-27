@@ -1,14 +1,7 @@
-import axios from 'axios';
-import Rating from '../components/Rating';
-import { getProducts } from '../api';
-
+import data from '../data.js';
 const HomeScreen = {
-  render: async () => {
-    const products = await getProducts();
-    if (products.error) {
-      return `<div class="error">${products.error}</div>`;
-    }
-
+  render: () => {
+    const  products  = data;
     return `
     <ul class="products">
       ${products
@@ -23,12 +16,6 @@ const HomeScreen = {
           <a href="/#/product/1">
             ${product.name}
           </a>
-        </div>
-        <div class="product-rating">
-          ${Rating.render({
-            value: product.rating,
-            text: `${product.numReviews} reviews`,
-          })}
         </div>
         <div class="product-brand">
           ${product.brand}
